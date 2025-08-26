@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hydro Bot - Moderno</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/onepage.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin:0; background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:#fff; scroll-behavior:smooth; }
+    header, section, footer { padding: 4rem 1rem; }
+    header { text-align:center; background: rgba(0,0,0,0.4); }
+    header img { max-width:120px; margin:1rem; border-radius:12px; }
+    h2 { margin-bottom:1rem; font-weight:bold; }
+    .carousel-caption { background: rgba(0,0,0,0.5); border-radius: 12px; padding:1rem; }
+    .carousel-item img { object-fit:cover; height:500px; }
+    footer { background:#111; color:#ccc; text-align:center; }
+    video { max-width:100%; border-radius:8px; margin:1rem 0; }
+    .fade-in { opacity:0; transform: translateY(40px); transition: all 1s ease; }
+    .fade-in.visible { opacity:1; transform: translateY(0); }
+    nav.navbar { background: rgba(0,0,0,0.8); }
+    .lang-switch button { margin:0 3px; }
+  </style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#top">Hydro Bot</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ideia">Ideia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#incendios">Incêndios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimento">Depoimento</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="btn btn-sm btn-outline-light" onclick="setLanguage('pt')">🇧🇷</button>
+        <button class="btn btn-sm btn-outline-light" onclick="setLanguage('en')">🇺🇸</button>
+        <button class="btn btn-sm btn-outline-light" onclick="setLanguage('es')">🇪🇸</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header id="top" class="fade-in">
+  <img src="images/logo.png" alt="Logo">
+  <img src="images/nossa_foto.jpg" alt="Nossa Foto">
+  <div id="sobre" class="mt-4">
+    <h2 data-i18n="about_title">Sobre Nós</h2>
+    <p data-i18n="about_text">Somos a equipe Hydro Bot...</p>
+  </div>
+  <div id="ideia" class="mt-4">
+    <h2 data-i18n="idea_title">Nossa Ideia</h2>
+    <p data-i18n="idea_text">Nosso projeto traz tecnologia...</p>
+  </div>
+</header>
+
+<!-- Carrossel -->
+<section id="galeria" class="fade-in">
+  <h2 class="text-center" data-i18n="gallery_title">Galeria</h2>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/img1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <p data-i18n="carousel_1">inserir texto</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/img2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <p data-i18n="carousel_2">inserir texto</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/img3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <p data-i18n="carousel_3">inserir texto</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Casos de incêndio -->
+<section id="incendios" class="fade-in">
+  <h2 data-i18n="fires_title">Casos de Incêndio</h2>
+  <div class="row g-3">
+    <div class="col-6 col-md-4"><img src="images/fire1.jpg" class="img-fluid rounded"></div>
+    <div class="col-6 col-md-4"><img src="images/fire2.jpg" class="img-fluid rounded"></div>
+    <div class="col-6 col-md-4"><img src="images/fire3.jpg" class="img-fluid rounded"></div>
+  </div>
+</section>
+
+<!-- Depoimento -->
+<section id="depoimento" class="fade-in">
+  <h2 data-i18n="testimony_title">Depoimento de um Bombeiro</h2>
+  <video controls>
+    <source src="videos/depoimento.mp4" type="video/mp4">
+  </video>
+</section>
+
+<!-- Contato -->
+<footer id="contato" class="fade-in">
+  <h2 data-i18n="contact_title">Entre em Contato</h2>
+  <p>Email: contato@hydrobot.com | Tel: (11) 99999-9999</p>
+  <p class="mt-3">&copy; 2025 Hydro Bot</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/i18n.js"></script>
+<script>
+// Animations
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+faders.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
